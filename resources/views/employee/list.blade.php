@@ -25,8 +25,8 @@
 		<tr>
 			<td>{{ $e->name }}</td>
 			<td>{{ $e->email }}</td>
-			<td><a href="">edit</a></td>
-			<td><a href="">delete</a></td>
+			<td><a href="{{ route('authController.edit' , [$e->id]) }}">edit</a></td>
+			<td><a href="{{ route('authController.delete' , [$e->id]) }}">delete</a></td>
 			
 		</tr>
 		

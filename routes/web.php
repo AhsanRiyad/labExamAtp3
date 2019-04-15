@@ -28,6 +28,9 @@ Route::get('/list', 'authController@list')->name('authController.list');
 Route::get('/edit/{id}', 'authController@edit')->name('authController.edit');
 
 
+Route::get('/delete/{id}', 'authController@delete')->name('authController.delete');
+
+
 
 
 
