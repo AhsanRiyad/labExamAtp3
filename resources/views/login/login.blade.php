@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Registration Page</title>
+	<title>Login Page</title>
 </head>
 <body>
 
@@ -11,16 +11,14 @@
 			1. @csrf
 			2. {{@csrf_field()}} 
 		-->
-		<h1>Registration</h1>
-		<h4>{{ $msg }}</h4>
+		<h1>Login</h1>
+		
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-		name: 	<input type="text" name="name"><br>
-
-		Password: 	<input type="text" name="password"><br>
-
+		
 		Email: 		<input type="text" name="email"><br>
 
+		Password: 	<input type="text" name="password"><br>
 		
 		<input type="submit" name="submit" value="Submit">
 	</form>

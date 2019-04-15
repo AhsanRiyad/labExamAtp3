@@ -13,18 +13,43 @@ class CreateUsers1Table extends Migration
      */
     public function up()
     {
-        Schema::create('users1', function (Blueprint $table) {
+        Schema::create('employee', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('password');
-            $table->string('email1');
-            $table->string('company_name');
-            $table->string('mobile');
-
-
+            $table->string('name')->default('dafault');
+            $table->string('password')->default('dafault');
+            $table->string('email')->default('dafault');
+            $table->string('company_name')->default('dafault');
+            $table->string('mobile')->default('dafault');
+            $table->string('type')->default('admin');
 
             $table->timestamps();
         });
+
+
+        Schema::create('admin', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('password');
+            $table->string('email');
+            $table->string('type')->default('admin');
+
+            $table->timestamps();
+        });
+
+
+        Schema::create('job', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('title');
+            $table->string('location');
+            $table->string('company_name');
+            $table->string('salary');
+
+            $table->timestamps();
+        });
+
+
+
     }
 
     /**
@@ -34,6 +59,8 @@ class CreateUsers1Table extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users1');
+        Schema::dropIfExists('employee');
+        Schema::dropIfExists('admin'); 
+        Schema::dropIfExists('job');
     }
 }

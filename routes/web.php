@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/reg', 'authController@reg')->name('authController.reg');
+
+Route::post('/reg', 'authController@regStore')->name('authController.reg');
+
+Route::get('/login', 'authController@login')->name('authController.login');
+
+Route::post('/login', 'authController@loginCheck')->name('authController.login');
+
+
+
+
+
+
+
