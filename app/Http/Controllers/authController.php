@@ -52,11 +52,29 @@ class authController extends Controller
     	//return count($result);
 
     	if(count($result)>0){
-    		return view('login.login')->withMsg('');
+    		return view('home.index')->withMsg('');
     	}
 
     	//return view('login.login')->withMsg('');
 
+    }
+
+
+    public function list(Request $req){
+
+    	$result = DB::select('select * from employee');
+
+    	//return $result;
+
+    	return view('employee.list')->withEmp($result);
+    }
+
+
+
+    public function edit(Request $req){
+
+
+    	return view('employee.edit');
     }
 
 

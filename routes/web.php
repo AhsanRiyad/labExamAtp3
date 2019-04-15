@@ -23,6 +23,9 @@ Route::get('/login', 'authController@login')->name('authController.login');
 
 Route::post('/login', 'authController@loginCheck')->name('authController.login');
 
+Route::get('/list', 'authController@list')->name('authController.list');
+
+Route::get('/edit/{id}', 'authController@edit')->name('authController.edit');
 
 
 

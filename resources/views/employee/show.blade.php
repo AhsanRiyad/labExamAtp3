@@ -6,10 +6,10 @@
 <body>
 	<h1>Account Details</h1>
 
-	<a href="{{route('account.index')}}">Back to List</a> |
-	<a href="{{route('account.edit', $account['accId'])}}">Edit</a> |
-	<a href="{{route('account.delete', $account['accId'])}}">Delete</a> |
-	<a href="{{route('logout.index')}}">Logout</a> 
+	<a href="">Back to List</a> |
+	<a href="">Edit</a> |
+	<a href="">Delete</a> |
+	<a href="">Logout</a> 
 
 
 	<table>

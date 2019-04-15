@@ -5,10 +5,10 @@
 </head>
 <body>
 
-	<h1>Welcome Home! {{session('uname')}}</h1>
+	<h1>Welcome Home!</h1>
 
-	<a href="{{route('account.index')}}">Account List</a> |
-	<a href="{{route('logout.index')}}">Logout</a> 
+	<a href="{{ route('authController.list') }}">Employee List</a> |
+	<a href="">Logout</a> 
 
 </body>
 </html>
