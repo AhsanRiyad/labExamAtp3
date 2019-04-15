@@ -1,0 +1,4 @@
+php artisan make:migration create_users1_table --create=users1
+
+
+php artisan migrate:fresh
