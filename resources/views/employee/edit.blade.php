@@ -13,21 +13,21 @@
 	<table>
 		<tr>
 			<td>Emp No</td>
-			<td><input type="text" name="accNo" value=""></td>
+			<td><input disabled="true" type="text" name="accNo" value="{{ $emp[0]->id }}"></td>
 		</tr>
 		<tr>
 			<td>Emap Name</td>
-			<td><input type="text" name="accName" value=""></td>
+			<td><input type="text" name="accName" value="{{ $emp[0]->name }}"></td>
 		</tr>
 	
 		<tr>
 			<td>Account Type</td>
-			<td><input type="number" name="typeId" value=""></td>
+			<td><input type="text" name="typeId" value="{{ $emp[0]->type }}"></td>
 		</tr>
 
 		<tr>
 			<td></td>
-			<td><input type="submit" name="submit" value="Create"></td>
+			<td><input type="submit" name="submit" value="Edit"></td>
 		</tr>
 	</table>
 </form>

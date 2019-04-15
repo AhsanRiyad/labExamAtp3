@@ -71,10 +71,15 @@ class authController extends Controller
 
 
 
-    public function edit(Request $req){
+    public function edit(Request $req , $id){
 
 
-    	return view('employee.edit');
+
+    	$result = DB::select('select * from employee where id = (?)' , [$id]);
+
+    	//return $result;
+
+    	return view('employee.edit')->withEmp($result);
     }
 
 
